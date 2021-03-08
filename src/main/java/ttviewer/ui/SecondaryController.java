@@ -1,7 +1,8 @@
-package ttviewer;
+package ttviewer.ui;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import ttviewer.ui.App;
 
 public class SecondaryController {
 

@@ -1,3 +1,3 @@
-/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/PrimaryController.java
-/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/App.java
-/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/SecondaryController.java
+/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/ui/PrimaryController.java
+/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/ui/SecondaryController.java
+/home/thinkpad/IdeaProjects/timetableviewer/src/main/java/ttviewer/ui/App.java

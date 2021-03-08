@@ -1,4 +1,4 @@
-package ttviewer;
+package ttviewer.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
