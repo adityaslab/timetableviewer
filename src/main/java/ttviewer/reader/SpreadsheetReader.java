@@ -10,9 +10,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class SpreadsheetReader {
-    public static String[] day={"Mon","Tue","Wed","Fri","Sat","Sun"};
+    public static String[] day={"Sat","Sun","Mon","Tue","Wed","Thu","Fri"};
     /*
     This function finds the cell of day asked and cell of subsequent day and return them in an ArrayList
     required day is passed as an integer
@@ -28,7 +29,7 @@ public class SpreadsheetReader {
             HSSFCell cell=row.getCell(0);
             String cellval=cell.getStringCellValue();
             if(day[i].equals(cellval)){
-                System.out.println("Its tuesday today!!!");
+                System.out.println("Its Wednesday today!!!");
                 System.out.println(cell.getStringCellValue());
                 ar.add(cell);
                 break;
@@ -68,8 +69,11 @@ public class SpreadsheetReader {
                     break;
                 }
             }
+            Calendar calender=Calendar.getInstance();
+            int dayOfWeek=calender.get(Calendar.DAY_OF_WEEK);
+            System.out.println(dayOfWeek);
             HSSFSheet sheet= wb.getSheetAt(i);
-            ArrayList<HSSFCell> dayrow=findDay(sheet,day,1);
+            ArrayList<HSSFCell> dayrow=findDay(sheet,day,dayOfWeek);
 
         } catch (IOException e) {
             e.printStackTrace();
