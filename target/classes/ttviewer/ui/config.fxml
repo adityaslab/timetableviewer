@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ttviewer.ui.ConfigController">
+   <top>
+      <HBox prefHeight="0.0" prefWidth="646.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7a0099;" stylesheets="@styleconfig.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Time Table">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="511.0" prefWidth="730.0" />
+            </content>
+          </Tab>
+          <Tab text="Config">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="comb" layoutX="471.0" layoutY="133.0" onAction="#bPress" prefHeight="41.0" prefWidth="234.0" style="-fx-background-color: #ff00ff;" />
+                        <Label layoutX="276.0" layoutY="140.0" prefHeight="38.0" prefWidth="112.0" text="Batch" textFill="#f8f3f3">
+                           <font>
+                              <Font name="Source Code Pro Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="424.0" layoutY="299.0" prefHeight="40.0" prefWidth="95.0" ripplerFill="#b956ebe0" style="-fx-background-color: #b300b3;" text="Done" textFill="#f8f7f7">
+                           <font>
+                              <Font name="Source Code Pro" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
