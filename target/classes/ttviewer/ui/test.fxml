@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ttviewer.ui.TestController">
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+   <children>
+      <Label fx:id="lab" layoutX="72.0" layoutY="125.0" prefHeight="35.0" prefWidth="211.0" text="Test">
+         <font>
+            <Font name="Cantarell Extra Bold" size="18.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="185.0" onAction="#buttonPress" prefHeight="40.0" prefWidth="149.0" style="-fx-background-color: #336ce5;" text="click me test" textAlignment="CENTER" textFill="#0a0909">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8815789222717285" green="0.8121954202651978" blue="0.8121954202651978" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8157894611358643" green="0.76291424036026" blue="0.7402533888816833" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </ripplerFill></JFXButton>
+      <JFXComboBox fx:id="combi" layoutX="305.0" layoutY="130.0" prefHeight="25.0" prefWidth="157.0" promptText="CS 210" />
+   </children>
+</AnchorPane>
