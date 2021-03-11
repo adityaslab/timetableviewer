@@ -6,17 +6,17 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.CellType;
 
-
 import java.io.IOException;
 import java.sql.Time;
 import java.util.*;
 
 public class SpreadsheetReader {
-    public static HashMap<Integer,String> classes=new HashMap<>();
+
+    public static HashMap<Integer,ClassInfo> infoclass=new HashMap<>();
     public static String[] day={"Sat","Sun","Mon","Tue","Wed","Thu","Fri"};
     public static int dayOfWeek, hour, min;
     /*
-    This function finds the cell of day asked and cell of subsequent day and return them in an ArrayList
+    This function finds the cell of today and subsequent day; return them in an ArrayList
     required day is passed as an integer
      */
     public static ArrayList<HSSFCell> findDay(HSSFSheet sheet,String[] day,int i){
@@ -62,6 +62,7 @@ public class SpreadsheetReader {
     }
 
     public static void main(String[] args){
+        HashMap<Integer,String> classes=new HashMap<>();
         //loc here contains location of the timetable file
         //Sting loc=args[0]
         String loc="/home/thinkpad/Downloads/t.xls";
@@ -102,12 +103,22 @@ public class SpreadsheetReader {
                     rlhour++;
                 }
 
-
-
             }
-            //printing values of hashmap
+            //passing classes values to infoclass
             for(int u=9;u<17;u++){
-                System.out.println(u+", "+classes.get(u));
+                String arg=classes.get(u);
+                if(arg==null)
+                    continue;
+                String[] ar=arg.split(" ");
+                ClassInfo ci=new ClassInfo(u,ar);
+                infoclass.put(u,ci);
+            }
+
+            for(int u=9;u<17;u++){
+                ClassInfo temp=infoclass.get(u);
+                if(temp==null)
+                    continue;
+                System.out.println(temp.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();
