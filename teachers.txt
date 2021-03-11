@@ -1,0 +1,24 @@
+HRI	Dr. Hari Singh
+TNS	Dr. Tanu Sharma
+GTI	Dr. Geetanjali
+SKT	Dr. Sanjiv Kumar Tiwari
+PPY	Dr. Papiya Lahiri
+BKP	Dr. Bhupendra Kumar Pathak
+PKP	Dr. P.K. Pandey
+EGA	Dr. Ekta Gupta
+RAJ	Dr. Rajesh Kumar
+SST	Dr. Saurabh Srivastava
+JAG	Dr. Jagpreet Singh Sandhu
+RIV	Dr. Ruchi Verma
+PMI	Mr. Praveen Modi
+RRS	Dr. Ragni Raj Singh
+RAD	Dr. R. S R Durai
+SKK	Prof. Sunil K. Khah
+HSL	Dr. Harsh Sohal
+RKB	Dr. Rakesh Bajaj
+VSA	Dr. Vineet Sharma
+RSU	Dr. Rajinder Sandhu
+RBT	Dr. Ravindara Bhatt
+PKR	Dr. Pardeep
+PBB	Prof P.B. Barman
+KAS	Prof. Karanjeet Singh
