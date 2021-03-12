@@ -1,7 +1,5 @@
 ttviewer/reader/File2Workbook.class
-ttviewer/ui/PrimaryController.class
 ttviewer/ui/ConfigController.class
-ttviewer/ui/SecondaryController.class
 ttviewer/ui/App.class
 ttviewer/reader/ClassInfo.class
 ttviewer/reader/SpreadsheetReader.class
