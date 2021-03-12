@@ -42,7 +42,13 @@ public class SpreadsheetReader {
                 continue;
             HSSFCell cell = row.getCell(0);
             String cellval = cell.getStringCellValue();
-            if (day[i + 1].equals(cellval)) {
+            if(day[i].equals("Fri")){
+                row=sheet.getRow(totalrow-1);
+                cell=row.getCell(0);
+                ar.add(cell);
+                break;
+            }
+            else if (day[i + 1].equals(cellval)) {
                 System.out.println(cell.getStringCellValue());
                 ar.add(cell);
                 break;
@@ -60,13 +66,14 @@ public class SpreadsheetReader {
         System.out.println(hour+":"+min);
     }
 
-    public static void main(String[] args){
+    public static HashMap<Integer,ClassInfo> mainfunc(String arg){
         HashMap<Integer,String> classes=new HashMap<>();
         //loc here contains location of the timetable file
         //Sting loc=args[0]
-        String loc="/home/thinkpad/Downloads/t.xls";
+        String[] args=arg.split(" ");
+        String loc=args[1];
         String sem="BTECH 2 SEM";
-        String batch="CS210";
+        String batch=args[0];
 
         try (HSSFWorkbook wb=File2Workbook.readF(loc)){
             int sheetsno=wb.getNumberOfSheets();
@@ -105,22 +112,19 @@ public class SpreadsheetReader {
             }
             //passing classes values to infoclass
             for(int u=9;u<17;u++){
-                String arg=classes.get(u);
-                if(arg==null)
+                String a=classes.get(u);
+                if(a==null)
                     continue;
-                String[] ar=arg.split(" ");
+                String[] ar=a.split(" ");
                 ClassInfo ci=new ClassInfo(u,ar);
                 infoclass.put(u,ci);
             }
 
-            for(int u=9;u<17;u++){
-                ClassInfo temp=infoclass.get(u);
-                if(temp==null)
-                    continue;
-                System.out.println(temp.toString());
-            }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return infoclass;
     }
 }
