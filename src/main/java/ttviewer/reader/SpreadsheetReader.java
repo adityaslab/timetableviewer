@@ -12,7 +12,7 @@ import java.util.*;
 public class SpreadsheetReader {
 
     public static HashMap<Integer,ClassInfo> infoclass=new HashMap<>();
-    public static String[] day={"Sat","Sun","Mon","Tue","Wed","Thu","Fri"};
+    public static String[] day={"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
     public static int dayOfWeek, hour, min;
     /*
     This function finds the cell of today and subsequent day; return them in an ArrayList
@@ -60,7 +60,9 @@ public class SpreadsheetReader {
 
     public static void updateValues(){
         Calendar calender=Calendar.getInstance();
-        dayOfWeek=calender.get(Calendar.DAY_OF_WEEK);
+        //dayOfWeek=calender.get(Calendar.DAY_OF_WEEK);
+        dayOfWeek=2;
+        System.out.println("day: "+dayOfWeek);
         hour=calender.get(Calendar.HOUR);
         min=calender.get(Calendar.MINUTE);
         System.out.println(hour+":"+min);
@@ -87,7 +89,7 @@ public class SpreadsheetReader {
             updateValues();
 
             HSSFSheet sheet= wb.getSheetAt(i);
-            ArrayList<HSSFCell> dayrow=findDay(sheet,day,dayOfWeek);
+            ArrayList<HSSFCell> dayrow=findDay(sheet,day,dayOfWeek-1);
 
 
 

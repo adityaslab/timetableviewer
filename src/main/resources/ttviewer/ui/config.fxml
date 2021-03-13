@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ttviewer.ui.ConfigController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ttviewer.ui.ConfigController">
    <top>
       <HBox prefHeight="0.0" prefWidth="646.0" BorderPane.alignment="CENTER" />
    </top>
@@ -90,7 +90,7 @@
                       <Font name="Source Code Pro" size="23.0" />
                    </font>
                 </JFXButton>
-                <JFXButton fx:id="b3" buttonType="RAISED" layoutX="435.0" layoutY="179.0" prefHeight="125.0" prefWidth="269.0" style="-fx-background-color: #b300b3;">
+                <JFXButton fx:id="b3" buttonType="RAISED" layoutX="382.0" layoutY="198.0" prefHeight="125.0" prefWidth="269.0" style="-fx-background-color: #b300b3;">
                    <ripplerFill>
                       <LinearGradient>
                          <stops>
@@ -111,7 +111,7 @@
                       <Font name="Source Code Pro" size="23.0" />
                    </font>
                 </JFXButton>
-                <JFXButton fx:id="b4" buttonType="RAISED" layoutX="744.0" layoutY="179.0" prefHeight="125.0" prefWidth="269.0" style="-fx-background-color: #b300b3;">
+                <JFXButton fx:id="b4" buttonType="RAISED" layoutX="704.0" layoutY="198.0" prefHeight="125.0" prefWidth="269.0" style="-fx-background-color: #b300b3;">
                    <ripplerFill>
                       <LinearGradient>
                          <stops>
