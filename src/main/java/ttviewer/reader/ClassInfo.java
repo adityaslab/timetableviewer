@@ -19,7 +19,7 @@ public class ClassInfo {
     }
 
     public String toStr(){
-        return classcode+" \n"+teacher;
+        return teacher+" \n "+venue+" \n "+classcode;
     }
     @Override
     public String toString() {
