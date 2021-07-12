@@ -4,7 +4,6 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.CellType;
 
 import java.io.IOException;
 import java.util.*;
@@ -74,7 +73,7 @@ public class SpreadsheetReader {
         //Sting loc=args[0]
         String[] args=arg.split(" ");
         String loc=args[1];
-        String sem="BTECH 2 SEM";
+        String sem="BTECH 1st year";
         String batch=args[0];
 
         try (HSSFWorkbook wb=File2Workbook.readF(loc)){
